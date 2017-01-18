@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="OE4-1E-1bT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Profile View Controller-->
+        <scene sceneID="buG-cK-r19">
+            <objects>
+                <viewController id="OE4-1E-1bT" customClass="ProfileViewController" customModule="TDFacebookLogin" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="h6K-rI-QFq"/>
+                        <viewControllerLayoutGuide type="bottom" id="YHv-aE-ZEi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XEh-sn-lr2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="RHV-dg-WsM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="244"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="244" id="1Nm-9Z-4L0"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="7Ib-md-gza" appends="YES" id="FJK-QI-OCk"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="DBi-PA-KS2">
+                                <rect key="frame" x="128" y="177" width="120" height="120"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="MDu-yD-Fp9"/>
+                                    <constraint firstAttribute="height" constant="120" id="OQW-H0-fJ3"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="fFG-K2-yJm" appends="YES" id="Uez-VE-2C8"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="firstNameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lf7-yd-hTK">
+                                <rect key="frame" x="129" y="305" width="117" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lastNameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jv-Qz-aGq">
+                                <rect key="frame" x="130" y="334" width="114" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iXe-1D-ESn" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="105" y="606" width="165" height="41"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="X2R-uv-fWR"/>
+                                    <constraint firstAttribute="width" constant="165" id="uwM-fD-jQ9"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AEO-4y-Xkf">
+                                <rect key="frame" x="156" y="372" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="6Xm-YQ-l6h"/>
+                                    <constraint firstAttribute="width" constant="64" id="ZCq-4Q-BVb"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="RHV-dg-WsM" secondAttribute="trailing" id="Fb0-aa-Y93"/>
+                            <constraint firstItem="6jv-Qz-aGq" firstAttribute="centerX" secondItem="XEh-sn-lr2" secondAttribute="centerX" id="Kv9-Ra-iyM"/>
+                            <constraint firstItem="YHv-aE-ZEi" firstAttribute="top" secondItem="iXe-1D-ESn" secondAttribute="bottom" constant="20" id="P1K-gW-Klx"/>
+                            <constraint firstItem="RHV-dg-WsM" firstAttribute="leading" secondItem="XEh-sn-lr2" secondAttribute="leading" id="R4Q-lR-AsF"/>
+                            <constraint firstItem="RHV-dg-WsM" firstAttribute="top" secondItem="XEh-sn-lr2" secondAttribute="top" id="Sna-BQ-17T"/>
+                            <constraint firstItem="Lf7-yd-hTK" firstAttribute="top" secondItem="DBi-PA-KS2" secondAttribute="bottom" constant="8" id="TIm-9A-25u"/>
+                            <constraint firstItem="iXe-1D-ESn" firstAttribute="centerX" secondItem="XEh-sn-lr2" secondAttribute="centerX" id="Tcz-Um-rGd"/>
+                            <constraint firstItem="6jv-Qz-aGq" firstAttribute="top" secondItem="Lf7-yd-hTK" secondAttribute="bottom" constant="8" id="hfT-gF-s97"/>
+                            <constraint firstItem="DBi-PA-KS2" firstAttribute="centerY" secondItem="RHV-dg-WsM" secondAttribute="centerY" constant="114.5" id="obC-Ek-UW8"/>
+                            <constraint firstItem="DBi-PA-KS2" firstAttribute="centerX" secondItem="RHV-dg-WsM" secondAttribute="centerX" id="wNZ-H2-YQt"/>
+                            <constraint firstItem="Lf7-yd-hTK" firstAttribute="centerX" secondItem="XEh-sn-lr2" secondAttribute="centerX" id="yOI-Iv-Iy3"/>
+                            <constraint firstItem="AEO-4y-Xkf" firstAttribute="centerX" secondItem="XEh-sn-lr2" secondAttribute="centerX" id="z3z-XR-Kja"/>
+                            <constraint firstItem="AEO-4y-Xkf" firstAttribute="top" secondItem="DBi-PA-KS2" secondAttribute="bottom" constant="75" id="zfU-7v-vTW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="avatarImageView" destination="DBi-PA-KS2" id="NrS-Vz-U41"/>
+                        <outlet property="coverImageView" destination="RHV-dg-WsM" id="wnS-dF-MyW"/>
+                        <outlet property="firstNameLabel" destination="Lf7-yd-hTK" id="XVT-Uk-uub"/>
+                        <outlet property="genderImageView" destination="AEO-4y-Xkf" id="6YH-uY-8Oi"/>
+                        <outlet property="lastNameLabel" destination="6jv-Qz-aGq" id="k4D-Ol-en9"/>
+                        <outlet property="logoutButton" destination="iXe-1D-ESn" id="2zz-Qz-YBR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rWl-a9-nIH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="fFG-K2-yJm">
+                    <connections>
+                        <action selector="avatarTapped:" destination="OE4-1E-1bT" id="aTf-oc-Ds0"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="7Ib-md-gza">
+                    <connections>
+                        <action selector="coverTapped:" destination="OE4-1E-1bT" id="JFU-vB-sNs"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="109.59999999999999" y="154.27286356821591"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="avatar_placeholder" width="470" height="470"/>
+    </resources>
+</document>

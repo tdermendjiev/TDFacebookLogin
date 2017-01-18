@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qeO-EX-djm">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Authentication View Controller-->
+        <scene sceneID="1YM-ch-E2h">
+            <objects>
+                <viewController id="qeO-EX-djm" customClass="AuthenticationViewController" customModule="TDFacebookLogin" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3t3-ZO-GYv"/>
+                        <viewControllerLayoutGuide type="bottom" id="1Mg-Z3-TTg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SN0-05-V13">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wYD-GR-5Mh" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="68" y="302" width="238" height="62"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="S6L-05-wP5"/>
+                                    <constraint firstAttribute="width" constant="238" id="rHS-Vx-hKj"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wYD-GR-5Mh" firstAttribute="centerY" secondItem="SN0-05-V13" secondAttribute="centerY" id="Xrb-Sa-mVp"/>
+                            <constraint firstItem="wYD-GR-5Mh" firstAttribute="centerX" secondItem="SN0-05-V13" secondAttribute="centerX" id="ixq-RD-ePy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loginButton" destination="wYD-GR-5Mh" id="s5F-jo-2Sf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZJx-jb-6RW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="157.59999999999999" y="80.50974512743629"/>
+        </scene>
+    </scenes>
+</document>
